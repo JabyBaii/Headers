@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link href="{{ url_for('static', filename='style.css', _external=True)}}" rel="stylesheet">
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Headlines</title>
+    </head>
+    <body>
+
+        <div id="header">
+            <div id="inner-header">
+                <h1>书单：</h1>
+            </div>
+        </div>
+
+        <div id="content">
+            <b><a href="http://127.0.0.1:5000/book/人生海海">人生海海</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/你当像鸟飞往你的山">你当像鸟飞往你的山</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/费曼学习法">费曼学习法</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/被淹没与被拯救的">被淹没与被拯救的</a></b><br /><br />
+
+            <b><a href="http://127.0.0.1:5000/book/罪与罚">罪与罚</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/牧羊少年奇幻之旅">牧羊少年奇幻之旅</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/心流">心流</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/心流#28FAO0-3e57aa755b5f45ac87b2d5fd9145f0e9">发现心流</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/少有人走的路#1-5ce9f73ea3144d9e863aa165daf433ef">少有人走的路1：心智成熟的旅程</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_61">少有人走的路2：勇敢地面对谎言</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_102">少有人走的路3：与心灵对话</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_194">少有人走的路4：在焦虑的年代获得精神的成长</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_264">少有人走的路5：不一样的鼓声</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_333">少有人走的路6：真诚是生命的药</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_419">少有人走的路7：靠窗的床</a></b><br />            
+            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_472">少有人走的路8：寻找石头</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/被讨厌的勇气">被讨厌的勇气</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/人间值得">人间值得</a></b><br />
+
+            <br />
+            <b>人物传记：</b><br />
+            <b><a href="http://127.0.0.1:5000/book/毛泽东传">毛泽东传</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/乔布斯传">乔布斯传</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/马斯克传">马斯克传</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/斯大林传">斯大林传</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/居里夫人自传">居里夫人自传</a></b><br />
+
+            <b><a href="http://127.0.0.1:5000/book/人性的弱点">人性的弱点</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/如何成为不完美主义者">如何成为不完美主义者</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/底层逻辑 看清这个世界的底牌">底层逻辑 看清这个世界的底牌</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/底层逻辑2：理解商业世界的本质">底层逻辑2：理解商业世界的本质</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/我有一只叫抑郁症的黑狗">我有一只叫抑郁症的黑狗</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/挪威的森林">挪威的森林</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/程序员的自我修养">程序员的自我修养</a></b><br />
+            <b><a href="http://127.0.0.1:5000/book/算法图解">算法图解</a></b><br />
+
+        </div>
+
+        <div id="main">
+            <h2>Current weather</h2>
+            <form>
+                <input type="text" name="city" placeholder="weather search">
+                <input type="submit" value="Submit">
+            </form>
+
+            <p>城市: <b>{{weather.city}}</b></p>
+            <p>{{weather.description}} |{{weather.temperature}}&#8451;</p>
+
+            <form>
+                <input type="text" name="publication" placeholder="search" />
+                <input type="submit" value="Submit" />
+            </form>
+
+            {% for article in articles %}
+                <b><a href="{{article.link}}">{{article.title}}</a></b><br />
+                <i>{{article.published}}</i><br />
+                <p>{{article.summary}}</p>
+                <hr />
+            {% endfor %}
+        </div>
+
+    </body>
+</html>
