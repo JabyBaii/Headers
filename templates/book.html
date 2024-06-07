@@ -4,8 +4,54 @@
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Headlines</title>
+
+        <script>
+            // 定义服务器地址和端口号
+            // var serverAddress = "https://books.positiveman.top:5000";
+            var serverAddress = "http://127.0.0.1:5000";
+    
+            // 生成URL并设置到链接上
+            function setURLs() {
+
+                document.getElementById("_book_1").href = serverAddress + "/book/" + encodeURIComponent("人生海海");
+                document.getElementById("_book_2").href = serverAddress + "/book/" + encodeURIComponent("你当像鸟飞往你的山");
+                document.getElementById("_book_3").href = serverAddress + "/book/" + encodeURIComponent("被淹没与被拯救的");
+                document.getElementById("_book_4").href = serverAddress + "/book/" + encodeURIComponent("罪与罚");
+                document.getElementById("_book_5").href = serverAddress + "/book/" + encodeURIComponent("牧羊少年奇幻之旅");
+                document.getElementById("_book_6").href = serverAddress + "/book/" + encodeURIComponent("被讨厌的勇气");
+                document.getElementById("_book_7").href = serverAddress + "/book/" + encodeURIComponent("人间值得");
+                document.getElementById("_book_8").href = serverAddress + "/book/" + encodeURIComponent("费曼学习法");
+                document.getElementById("_book_9").href = serverAddress + "/book/" + encodeURIComponent("人性的弱点");
+                document.getElementById("_book_10").href = serverAddress + "/book/" + encodeURIComponent("如何成为不完美主义者");
+                document.getElementById("_book_11").href = serverAddress + "/book/" + encodeURIComponent("挪威的森林");
+
+                document.getElementById("_people_1").href = serverAddress + "/book/" + encodeURIComponent("毛泽东传");
+                document.getElementById("_people_2").href = serverAddress + "/book/" + encodeURIComponent("乔布斯传");
+                document.getElementById("_people_3").href = serverAddress + "/book/" + encodeURIComponent("马斯克传");
+                document.getElementById("_people_4").href = serverAddress + "/book/" + encodeURIComponent("斯大林传");
+                document.getElementById("_people_5").href = serverAddress + "/book/" + encodeURIComponent("居里夫人自传");
+
+                document.getElementById("_code_1").href = serverAddress + "/book/" + encodeURIComponent("程序员的自我修养");
+                document.getElementById("_code_2").href = serverAddress + "/book/" + encodeURIComponent("算法图解");
+
+                document.getElementById("_unknow_1_1").href = serverAddress + "/book/" + encodeURIComponent("心流");
+                document.getElementById("_unknow_1_2").href = serverAddress + "/book/" + "心流#28FAO0-3e57aa755b5f45ac87b2d5fd9145f0e9"; // 第二部 发现心流
+                document.getElementById("_unknow_2_1").href = serverAddress + "/book/" + "少有人走的路#1-5ce9f73ea3144d9e863aa165daf433ef"; // 少有人走的路1：心智成熟的旅
+                document.getElementById("_unknow_2_2").href = serverAddress + "/book/" + "少有人走的路#sigil_toc_id_61"; // 少有人走的路2：勇敢地面对谎言
+                document.getElementById("_unknow_2_3").href = serverAddress + "/book/" + "少有人走的路#sigil_toc_id_102"; // 少有人走的路3：与心灵对话
+                document.getElementById("_unknow_2_4").href = serverAddress + "/book/" + "少有人走的路#sigil_toc_id_194"; // 少有人走的路4：在焦虑的年代获得精神的成长
+                document.getElementById("_unknow_2_5").href = serverAddress + "/book/" + "少有人走的路#sigil_toc_id_264"; // 少有人走的路5：不一样的鼓声
+                document.getElementById("_unknow_2_6").href = serverAddress + "/book/" + "少有人走的路#sigil_toc_id_333"; // 少有人走的路6：真诚是生命的药
+                document.getElementById("_unknow_2_7").href = serverAddress + "/book/" + "少有人走的路#sigil_toc_id_419"; // 少有人走的路7：靠窗的床
+                document.getElementById("_unknow_2_8").href = serverAddress + "/book/" + "少有人走的路#sigil_toc_id_472"; // 少有人走的路8：寻找石头
+                document.getElementById("_unknow_3").href = serverAddress + "/book/" + encodeURIComponent("我有一只叫抑郁症的黑狗");
+                document.getElementById("_unknow_4_1").href = serverAddress + "/book/" + encodeURIComponent("底层逻辑 看清这个世界的底牌");     // 第一部
+                document.getElementById("_unknow_4_2").href = serverAddress + "/book/" + encodeURIComponent("底层逻辑2：理解商业世界的本质");   // 第二部
+                
+            }
+        </script>
     </head>
-    <body>
+    <body onload="setURLs()">
 
         <div id="header">
             <div id="inner-header">
@@ -13,47 +59,50 @@
             </div>
         </div>
 
-        <div id="content">
-            <b><a href="http://127.0.0.1:5000/book/人生海海">人生海海</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/你当像鸟飞往你的山">你当像鸟飞往你的山</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/费曼学习法">费曼学习法</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/被淹没与被拯救的">被淹没与被拯救的</a></b><br /><br />
+        <div>
+            <h3>心境提升：</h3>
+            <b><a id="_book_1">《人生海海》</a></b><br>
+            <b><a id="_book_2">《你当像鸟飞往你的山》</a></b><br>
+            <b><a id="_book_3">《被淹没与被拯救的》</a></b><br>
+            <b><a id="_book_4">《罪与罚》</a></b><br>
+            <b><a id="_book_5">《牧羊少年奇幻之旅》</a></b><br>
+            <b><a id="_book_6">《被讨厌的勇气》</a></b><br>
+            <b><a id="_book_7">《人间值得》</a></b><br>
+            <b><a id="_book_8">《费曼学习法》</a></b><br>
+            <b><a id="_book_9">《人性的弱点》</a></b><br>
+            <b><a id="_book_10">《如何成为不完美主义者》</a></b><br>
+            <b><a id="_book_11">《挪威的森林》</a></b><br>
 
-            <b><a href="http://127.0.0.1:5000/book/罪与罚">罪与罚</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/牧羊少年奇幻之旅">牧羊少年奇幻之旅</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/心流">心流</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/心流#28FAO0-3e57aa755b5f45ac87b2d5fd9145f0e9">发现心流</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/少有人走的路#1-5ce9f73ea3144d9e863aa165daf433ef">少有人走的路1：心智成熟的旅程</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_61">少有人走的路2：勇敢地面对谎言</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_102">少有人走的路3：与心灵对话</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_194">少有人走的路4：在焦虑的年代获得精神的成长</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_264">少有人走的路5：不一样的鼓声</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_333">少有人走的路6：真诚是生命的药</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_419">少有人走的路7：靠窗的床</a></b><br />            
-            <b><a href="http://127.0.0.1:5000/book/少有人走的路#sigil_toc_id_472">少有人走的路8：寻找石头</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/被讨厌的勇气">被讨厌的勇气</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/人间值得">人间值得</a></b><br />
+            <h3>人类传记：</h3>
+            <b><a id="_people_1">《毛泽东传》</a></b><br>
+            <b><a id="_people_2">《乔布斯传》</a></b><br>
+            <b><a id="_people_3">《马斯克传》</a></b><br>
+            <b><a id="_people_4">《斯大林传》</a></b><br>
+            <b><a id="_people_5">《居里夫人自传》</a></b><br>
+            
+            <h3>程序人生：</h3>
+            <b><a id="_code_1">《程序员的自我修养》</a></b><br>
+            <b><a id="_code_2">《算法图解》</a></b><br>
 
-            <br />
-            <b>人物传记：</b><br />
-            <b><a href="http://127.0.0.1:5000/book/毛泽东传">毛泽东传</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/乔布斯传">乔布斯传</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/马斯克传">马斯克传</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/斯大林传">斯大林传</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/居里夫人自传">居里夫人自传</a></b><br />
-
-            <b><a href="http://127.0.0.1:5000/book/人性的弱点">人性的弱点</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/如何成为不完美主义者">如何成为不完美主义者</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/底层逻辑 看清这个世界的底牌">底层逻辑 看清这个世界的底牌</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/底层逻辑2：理解商业世界的本质">底层逻辑2：理解商业世界的本质</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/我有一只叫抑郁症的黑狗">我有一只叫抑郁症的黑狗</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/挪威的森林">挪威的森林</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/程序员的自我修养">程序员的自我修养</a></b><br />
-            <b><a href="http://127.0.0.1:5000/book/算法图解">算法图解</a></b><br />
+            <h3>未分类：</h3>
+            <b><a id="_unknow_1_1">《心流》</a></b><br>
+            <b><a id="_unknow_1_2">《发现心流》</a></b><br>
+            <b><a id="_unknow_2_1">《少有人走的路1：心智成熟的旅》</a></b><br>
+            <b><a id="_unknow_2_2">《少有人走的路2：勇敢地面对谎言》</a></b><br>
+            <b><a id="_unknow_2_3">《少有人走的路3：与心灵对话》</a></b><br>
+            <b><a id="_unknow_2_4">《少有人走的路4：在焦虑的年代获得精神的成长》</a></b><br>
+            <b><a id="_unknow_2_5">《少有人走的路5：不一样的鼓声》</a></b><br>
+            <b><a id="_unknow_2_6">《少有人走的路6：真诚是生命的药》</a></b><br>
+            <b><a id="_unknow_2_7">《少有人走的路7：靠窗的床》</a></b><br>
+            <b><a id="_unknow_2_8">《少有人走的路8：寻找石头》</a></b><br>
+            <b><a id="_unknow_3">《我有一只叫抑郁症的黑狗》</a></b><br>
+            <b><a id="_unknow_4_1">《底层逻辑 看清这个世界的底牌》</a></b><br>
+            <b><a id="_unknow_4_2">《底层逻辑2：理解商业世界的本质》</a></b><br><br>
 
         </div>
 
-        <div id="main">
+
+        <!-- <div id="main">
             <h2>Current weather</h2>
             <form>
                 <input type="text" name="city" placeholder="weather search">
@@ -74,7 +123,7 @@
                 <p>{{article.summary}}</p>
                 <hr />
             {% endfor %}
-        </div>
+        </div> -->
 
     </body>
 </html>
