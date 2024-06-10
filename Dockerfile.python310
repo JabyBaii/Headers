@@ -1,0 +1,21 @@
+# 使用Python 3.10.12基础镜像部署headers
+FROM python:3.10.12-slim
+
+# 设置工作目录
+WORKDIR /app
+
+# 复制程序到容器中
+COPY . /app
+
+# 激活虚拟环境并安装依赖
+RUN python3 -m venv venv && \
+    . venv/bin/activate && \
+    pip install --upgrade pip && \
+    pip install -r requirements.txt
+
+# 使虚拟环境在启动时激活
+ENV VIRTUAL_ENV=/app/venv
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+# 默认执行命令
+CMD ["python3", "book_page.py"]
