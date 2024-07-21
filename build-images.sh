@@ -9,15 +9,17 @@ IMAGE_NAME=`echo ${Git_URL} | awk -F ".git" '{print $2}' | awk -F "/" '{print $3
 echo $IMAGE_NAME
 echo $VERSION
 
+cd ./deployfiles
+
+echo "开始制作镜像...."
 docker build -t ${IMAGE_NAME}:${VERSION} .
 #docker push registry.cn-hangzhou.aliyuncs.com/myserver-io/tomcat-app1:$1
 
-
-cd ./deployfiles
-
+echo "停止原有的服务...."
 docker-compose down
 
 sed -i "s/image: .*/image: ${IMAGE_NAME}:${VERSION}/g" docker-compose.yml
 
+echo "启动新版本...."
 docker-compose up -d
 
