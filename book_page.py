@@ -152,6 +152,11 @@ def book_518_7():
     response = make_response(render_template('人性的弱点 (5_18_2024 4_12_45 PM).html'))
     return response
 
+@app.route('/book/一生的财富：洛克菲勒写给儿子的38封信')
+def book_722():
+    response = make_response(render_template('一生的财富：洛克菲勒写给儿子的38封信 (传世励志经典) (7_21_2024 10_19_29 PM).html'))
+    return response
+
 @app.route('/')
 def home():
     publication = get_value_with_fallback('publication')
